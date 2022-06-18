@@ -4,4 +4,5 @@ import { ICreateAnswerVacancyRequestDTO } from "../useCases/createAnswer/ICreate
 export interface ICandidateRepository {
     createVacancy(data: ICreateAnswerVacancyRequestDTO): Promise<void>
     checkIfUserHasAlreadyAnsweredVacancy(userUid: String, vacancyId: String): Promise<boolean>
+    fetchAnswersByVacancyId(name: string): Promise<Document[]>
 }

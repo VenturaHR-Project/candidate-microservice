@@ -13,4 +13,9 @@ export class CandidateRepository implements ICandidateRepository {
     async createVacancy(data: ICreateAnswerVacancyRequestDTO): Promise<void> {
         await AnswerVacancy.create(data)
     }
+
+    async fetchAnswersByVacancyId(vacancyId: string): Promise<Document<any, any, any>[]> {
+        const response = await AnswerVacancy.find({ vacancyId }).sort({'score': -1})
+        return response
+    }
 }
