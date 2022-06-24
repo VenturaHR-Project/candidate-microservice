@@ -9,6 +9,8 @@ type Answers = {
 interface IAnswerVancancy extends Document {
     userUid: string
     vacancyId: string
+    userName: string
+    userEmail: string
     answers: Answers[]
     score: number
     createdDate: string
@@ -21,6 +23,16 @@ const schema = new Schema<IAnswerVancancy>({
         trim: true,
     },
     vacancyId: {
+        type: String,
+        require: true,
+        trim: true,
+    },
+    userName: {
+        type: String,
+        require: true,
+        trim: true,
+    },
+    userEmail: {
         type: String,
         require: true,
         trim: true,
