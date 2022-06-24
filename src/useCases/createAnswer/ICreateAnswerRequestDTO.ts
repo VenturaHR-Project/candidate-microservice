@@ -4,7 +4,7 @@ export interface ICreateAnswerVacancyRequestDTO{
     userUid: string
     vacancyId: string
     userName: string
-    userEmail: string
+    userPhone: string
     answers: Answers[]
     score: number
     createdDate: string

@@ -10,7 +10,7 @@ interface IAnswerVancancy extends Document {
     userUid: string
     vacancyId: string
     userName: string
-    userEmail: string
+    userPhone: string
     answers: Answers[]
     score: number
     createdDate: string
@@ -32,7 +32,7 @@ const schema = new Schema<IAnswerVancancy>({
         require: true,
         trim: true,
     },
-    userEmail: {
+    userPhone: {
         type: String,
         require: true,
         trim: true,
